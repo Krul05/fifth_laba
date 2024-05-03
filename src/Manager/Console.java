@@ -1,2 +1,9 @@
-package Manager;public class Console {
+package Manager;
+/**
+ * Класс Console - выводит сообщения в консоль
+ */
+public class Console {
+    public void println(String text) {
+        System.out.println(text);
+    }
 }

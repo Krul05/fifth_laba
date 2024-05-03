@@ -1,2 +1,11 @@
-package Models;public enum MpaaRating {
+package Models;
+/**
+ * Возможные рейтинги фильма
+ */
+public enum MpaaRating {
+    G,
+    PG,
+    PG_13,
+    R,
+    NC_17;
 }

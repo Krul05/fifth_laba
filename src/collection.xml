@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.8" class="java.beans.XMLDecoder">
+ <object class="java.util.LinkedList">
+  <void method="add">
+   <object class="Models.Movie">
+    <void property="coordinates">
+     <object class="Models.Coordinates">
+      <void property="x">
+       <double>4.0</double>
+      </void>
+      <void property="y">
+       <int>3</int>
+      </void>
+     </object>
+    </void>
+    <void property="creationDate">
+     <object class="java.sql.Timestamp">
+      <long>1714745837529</long>
+      <void property="nanos">
+       <int>529339700</int>
+      </void>
+     </object>
+    </void>
+    <void property="genre">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>Models.MovieGenre</class>
+      <string>HORROR</string>
+     </object>
+    </void>
+    <void property="id">
+     <int>1000</int>
+    </void>
+    <void property="mpaaRating">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>Models.MpaaRating</class>
+      <string>R</string>
+     </object>
+    </void>
+    <void property="name">
+     <string>dfds</string>
+    </void>
+    <void property="oscarsCount">
+     <int>5</int>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
