@@ -44,7 +44,7 @@ public class Inputs {
         try {
             Builders builders = new Builders(console, this);
             String movieName = builders.movieNameBuilder(scanner.nextLine().trim());
-            int oscars = builders.oscarsBuilder(scanner.nextLine());
+            int oscars = builders.oscarsBuilder(scanner.nextLine().trim());
             Coordinates coordinates = builders.coordinatesBuilder(scanner.nextLine(), scanner.nextLine());
             String isOperator = builders.isOperatorBuilder(scanner.nextLine());
             Person person = null;
@@ -54,8 +54,8 @@ public class Inputs {
                 Country nationality = builders.nationalityBuilder(scanner.nextLine());
                 person = new Person(personName, passportID, nationality);
             }
-            MovieGenre genre = builders.genreBuilder(genreInput());
-            MpaaRating rating = builders.ratingBuilder(ratingInput());
+            MovieGenre genre = builders.genreBuilder(scanner.nextLine().trim());
+            MpaaRating rating = builders.ratingBuilder(scanner.nextLine().trim());
             Movie movie = new Movie(movieName, coordinates, oscars, genre, rating, person);
             return movie;
         } catch (Exception ex) {
