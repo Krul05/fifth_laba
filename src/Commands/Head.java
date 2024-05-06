@@ -18,6 +18,11 @@ public class Head extends Command{
 
     public void action() {
         LinkedList<Movie> collection = collectionManager.getCollection();
-        console.println(collection.get(0).getMovie());
+        try {
+            console.println(collection.get(0).getMovie());
+        } catch (Exception ex) {
+            console.println("Коллекция пуста");
+        }
+
     }
 }

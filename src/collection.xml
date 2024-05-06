@@ -6,41 +6,29 @@
     <void property="coordinates">
      <object class="Models.Coordinates">
       <void property="x">
-       <double>4.0</double>
+       <double>43.0</double>
       </void>
       <void property="y">
-       <int>3</int>
+       <int>54</int>
       </void>
      </object>
     </void>
     <void property="creationDate">
      <object class="java.sql.Timestamp">
-      <long>1714745837529</long>
+      <long>1714942544890</long>
       <void property="nanos">
-       <int>529339700</int>
+       <int>890960600</int>
       </void>
-     </object>
-    </void>
-    <void property="genre">
-     <object class="java.lang.Enum" method="valueOf">
-      <class>Models.MovieGenre</class>
-      <string>HORROR</string>
      </object>
     </void>
     <void property="id">
      <int>1000</int>
     </void>
-    <void property="mpaaRating">
-     <object class="java.lang.Enum" method="valueOf">
-      <class>Models.MpaaRating</class>
-      <string>R</string>
-     </object>
-    </void>
     <void property="name">
-     <string>dfds</string>
+     <string>dgfd</string>
     </void>
     <void property="oscarsCount">
-     <int>5</int>
+     <int>6</int>
     </void>
    </object>
   </void>

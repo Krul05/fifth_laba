@@ -14,6 +14,11 @@ public class RemoveFirst extends Command {
 
 
     public void action() {
-        collectionManager.getCollection().remove(0);
+        try {
+            collectionManager.getCollection().remove(0);
+        } catch (Exception ex) {
+            console.println("Коллекция пуста");
+        }
+
     }
 }

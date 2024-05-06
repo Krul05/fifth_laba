@@ -2,18 +2,26 @@ package Manager;
 
 import Models.Movie;
 
+import java.io.File;
 import java.util.LinkedList;
 /**
  * Класс CollectionManager - управляет коллекцией
  */
 public class CollectionManager {
-    public CollectionManager() {
+    public CollectionManager(File file, LinkedList<Movie> collection) {
         creationDate = java.time.ZonedDateTime.now();
+        this.file = file;
+        this.collection = collection;
     }
-    LinkedList<Movie> collection = new LinkedList<>();
+    LinkedList<Movie> collection;
     private java.time.ZonedDateTime creationDate;
     public LinkedList getCollection() {
         return collection;
+    }
+    private File file;
+
+    public File getFile() {
+        return file;
     }
 
     public String show() {

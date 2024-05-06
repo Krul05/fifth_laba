@@ -4,6 +4,9 @@ import Manager.CollectionManager;
 import Manager.CommandManager;
 import Manager.Console;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 public class Clear extends Command{
     CollectionManager collectionManager;
     public Clear(Console console, CollectionManager collectionManager) {
@@ -12,7 +15,10 @@ public class Clear extends Command{
     }
 
 
-    public void action() {
+    public void action() throws FileNotFoundException {
         collectionManager.getCollection().clear();
+        PrintWriter printWriter = new PrintWriter(collectionManager.getFile());
+        printWriter.print("");
+        printWriter.close();
     }
 }

@@ -24,14 +24,14 @@ public class Inputs {
     }
     public Movie movieInput() {
         Builders builders = new Builders(console, this);
-        String movieName = builders.movieNameBuilder(movieNameInput());
+        String movieName = builders.movieNameBuilder(movieNameInput().trim());
         int oscars = builders.oscarsBuilder(oscarsInput());
         Coordinates coordinates = builders.coordinatesBuilder(xInput(), yInput());
         String isOperator = builders.isOperatorBuilder(isOperatorInput());
         Person person = null;
         if (isOperator.equals("yes")) {
-            String personName = builders.personNameBuilder(personNameInput());
-            String passportID = builders.passportIDBuilder(passportIDInput());
+            String personName = builders.personNameBuilder(personNameInput().trim());
+            String passportID = builders.passportIDBuilder(passportIDInput().trim());
             Country nationality = builders.nationalityBuilder(nationalityInput());
             person = new Person(personName, passportID, nationality);
         }
@@ -43,14 +43,14 @@ public class Inputs {
     public Movie movieScan(Scanner scanner) {
         try {
             Builders builders = new Builders(console, this);
-            String movieName = builders.movieNameBuilder(scanner.nextLine());
+            String movieName = builders.movieNameBuilder(scanner.nextLine().trim());
             int oscars = builders.oscarsBuilder(scanner.nextLine());
             Coordinates coordinates = builders.coordinatesBuilder(scanner.nextLine(), scanner.nextLine());
             String isOperator = builders.isOperatorBuilder(scanner.nextLine());
             Person person = null;
             if (isOperator.equals("yes")) {
-                String personName = builders.personNameBuilder(scanner.nextLine());
-                String passportID = builders.passportIDBuilder(scanner.nextLine());
+                String personName = builders.personNameBuilder(scanner.nextLine().trim());
+                String passportID = builders.passportIDBuilder(scanner.nextLine().trim());
                 Country nationality = builders.nationalityBuilder(scanner.nextLine());
                 person = new Person(personName, passportID, nationality);
             }
@@ -119,7 +119,7 @@ public class Inputs {
         return s;
     }
 
-    private String input() {
+    public String input() {
         InputStream inputStream = System.in;
         Reader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader reader = new BufferedReader(inputStreamReader);

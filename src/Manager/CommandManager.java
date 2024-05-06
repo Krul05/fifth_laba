@@ -68,7 +68,7 @@ public class CommandManager {
                 return exit.action();
             } else if (elements[0].equals("save")) {
                 Save save = new Save(console, collectionManager);
-                save.action();
+                save.action(collectionManager.getFile());
             } else if (elements[0].equals("execute_script")) {
                 ExecuteScript executeScript = new ExecuteScript(console, collectionManager);
                 if (elements.length == 2) {

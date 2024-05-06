@@ -17,10 +17,14 @@ public class RemoveById extends Command{
 
     public void action(int id) {
         LinkedList<Movie> collection = collectionManager.getCollection();
-        for(int i = 0; i<=collection.size(); i++) {
-            if (collection.get(i).getId()==id) {
-                collectionManager.getCollection().remove(i);
+        try {
+            for (int i = 0; i < collection.size(); i++) {
+                if (collection.get(i).getId() == id) {
+                    collectionManager.getCollection().remove(i);
+                }
             }
+        } catch (Exception ex) {
+            console.println("Такого id нет");
         }
     }
 }

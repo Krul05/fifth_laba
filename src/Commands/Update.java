@@ -21,7 +21,7 @@ public class Update extends Command{
     public void action(int id) {
         LinkedList<Movie> collection = collectionManager.getCollection();
         Inputs inputs = new Inputs(console);
-        for(int i = 0; i<=collection.size(); i++) {
+        for(int i = 0; i<collection.size(); i++) {
             if (collection.get(i).getId()==id) {
                 collectionManager.getCollection().set(i, inputs.movieInput());
             }
@@ -30,7 +30,7 @@ public class Update extends Command{
     public void action(int id, Scanner scanner) {
         LinkedList<Movie> collection = collectionManager.getCollection();
         Inputs inputs = new Inputs(console);
-        for(int i = 0; i<=collection.size(); i++) {
+        for(int i = 0; i<collection.size(); i++) {
             if (collection.get(i).getId()==id) {
                 collectionManager.getCollection().set(i, inputs.movieScan(scanner));
             }
