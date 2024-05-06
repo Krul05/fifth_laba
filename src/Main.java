@@ -12,12 +12,12 @@ public class Main {
             s = args[0];
         } else {
             console.println("Введите название файла");
-            //try {
+            try {
                 s = inputs.input().trim();
-           // } catch (Exception ex) {
-            //    console.println("Программа завершена");
-            //    return;
-           // }
+            } catch (Exception ex) {
+                console.println("Программа завершена");
+                return;
+            }
 
         }
         File file = new File(s);
@@ -32,13 +32,12 @@ public class Main {
             CollectionManager collectionManager = new CollectionManager(file, xmlWorker.read());
             boolean flag = true;
             while (flag) {
-                //try {
+                try {
                     flag = inputs.commandInput(collectionManager);
-                //} catch (Exception ex) {
-                //    console.println("Программа завершена");
-                //    return;
-
-                //}
+                } catch (Exception ex) {
+                    console.println("Программа завершена");
+                    return;
+                }
 
             }
         } else {
