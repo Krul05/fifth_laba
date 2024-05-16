@@ -14,7 +14,7 @@ public class Main {
             console.println("Введите название файла");
             try {
                 s = inputs.input().trim();
-            } catch (Exception ex) {
+            } catch (NullPointerException ex) {
                 console.println("Программа завершена");
                 return;
             }
@@ -34,7 +34,7 @@ public class Main {
             while (flag) {
                 try {
                     flag = inputs.commandInput(collectionManager);
-                } catch (Exception ex) {
+                } catch (NullPointerException ex) {
                     console.println("Программа завершена");
                     return;
                 }

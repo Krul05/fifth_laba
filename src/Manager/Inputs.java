@@ -3,6 +3,8 @@ package Manager;
 import Models.*;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 /**
  * Класс Inputs - вводит данные
@@ -137,4 +139,5 @@ public class Inputs {
         CommandManager commandManager = new CommandManager(console, collectionManager);
         return commandManager.commandManage(s);
     }
+
 }
